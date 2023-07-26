@@ -33,7 +33,7 @@ In order for the user to have a smooth experience working with a dynamic website
 ## Getting visual feedback in your programs [MDN console.logs Docs](https://developer.mozilla.org/en-US/docs/Web/API/Console/log)
 - The first command we'll learn in JavaScript is console.log. This command is used to print something onto the screen. As we write our first lines of code, we'll be using console.log frequently as a way to visually see the output of our programs.
 - While coding, you will notice that the application does a lot of things that you are un able to track. Using console.logs will allow you to print something to our terminal in order to confirm data or track what our code is doing.
-- console.logs do not are different from return statements, which we will cover more in depth later
+- console.logs are different from return statements, which we will cover more in depth later
 
 ```
 console.log("hello world");
