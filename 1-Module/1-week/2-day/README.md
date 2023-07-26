@@ -121,6 +121,39 @@ console.log(true || false);
 
 <br/>
 
+## Comparison Operators
+```
+> (greater than)
+< (less than)
+>= (greater than or equal to)
+<= (less than or equal to)
+=== (equal to)
+!== (not equal to)
+
+console.log(10 > 5); // => true
+console.log(10 < 5); // => false
+console.log(1 < 7); // => true
+console.log(7 <= 7); // => true
+console.log(5 === 6); // => false
+console.log(5 !== 6); // => true
+console.log("a" !== "A"); // => true
+console.log(false === false); // => true
+```
+
+### === VS ==
+In JavaScript there are two equality operators triple-equals (===) and double-equals (==). The operators differ in how they compare across differing types. Triple-equals performs the strict equality, meaning it will only return true if the types are the same. Double-equals performs the loose equality, meaning it can return true even if the values are of different types. Double-equals may coerce a value into another type for the comparison, and this behavior is hard to predict:
+
+```
+console.log(5 === "5"); // false
+console.log(5 == "5"); // true
+console.log(0 === false); // false
+console.log(0 == false); //true
+```
+
+# Short Practice 10 Minutes
+- [Comparison Operators Quiz](https://open.appacademy.io/learn/js-py---pt-jul-2023-online/week-1---intro-to-javascript/comparison-operators-quiz)
+
+<br/>
 
 ## Variables [MDN Variable Docs](https://developer.mozilla.org/en-US/docs/Glossary/Variable)
 Variables are used to store information to be referenced and manipulated in a computer program. They also provide a way of labeling data with a descriptive name, so our programs can be understood more clearly by programmers. It is helpful to think of variables as containers that hold information. Their sole purpose is to label and store data in computer memory. This data can then be used and even changed throughout the lifetime of your program.
