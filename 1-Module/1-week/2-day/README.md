@@ -152,6 +152,7 @@ console.log(0 == false); //true
 
 # Short Practice 10 Minutes
 - [Comparison Operators Quiz](https://open.appacademy.io/learn/js-py---pt-jul-2023-online/week-1---intro-to-javascript/comparison-operators-quiz)
+    - Short Practice Q&A 10 min
 
 <br/>
 
