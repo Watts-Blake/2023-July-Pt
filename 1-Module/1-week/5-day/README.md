@@ -5,8 +5,8 @@
 - If You have Question.... Please ask in your live questions channels
 - When finished make sure to follow the check setup guides.
 
-[Windows Check Setup](https://open.appacademy.io/learn/js-py---pt-jul-2023-online/week-1---intro-to-javascript/tech-setup-check---wsl2-ubuntu)
-[Mac Check Setup](https://open.appacademy.io/learn/js-py---pt-jul-2023-online/week-1---intro-to-javascript/tech-setup-check---mac)
+- [Windows Check Setup](https://open.appacademy.io/learn/js-py---pt-jul-2023-online/week-1---intro-to-javascript/tech-setup-check---wsl2-ubuntu)
+- [Mac Check Setup](https://open.appacademy.io/learn/js-py---pt-jul-2023-online/week-1---intro-to-javascript/tech-setup-check---mac)
 
 
 <br/>
