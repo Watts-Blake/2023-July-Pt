@@ -1,7 +1,7 @@
 # M1Wk2D2 Intermediate Functions
 <br/>
 
-# Learning Boost 5 Min
+## Learning Boost 5 Min
 <br/>
 
 ## Splice, Split, and Join
