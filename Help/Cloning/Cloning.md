@@ -8,8 +8,9 @@
 - 2.) Click on the green code button
 ![Alt text](Screenshot%202023-08-09%20134548.png)
 - 3.) Verify you are using the auth that you have setup, default is typically HTTPS so leaving this option highlited is fine, if you have changed to ssh, then click this option instead
-- 4.) Click the copy button next to the url in the bottom right
 ![Alt text](Screenshot%202023-08-09%20134748.png)
+- 4.) Click the copy button next to the url in the bottom right
+
 - 5.) Open up your terminal, navigate to where you would like to store this repo locally and type in git clone, then paste what you just copied from github
 ```
 //example for this specific repo we are cloning
