@@ -3,28 +3,34 @@ let average = function (num1, num2) {
   return avg;
 };
 
-// console.log(average(5, 10));
 
-// more than one line, curlies are needed
-let averageArrow = (num1, num2) => {
-  let avg = (num1 + num2) / 2;
-  return avg;
-};
+// console.log(average(3, 7));
 
-// console.log(averageArrow(5, 10));
+// arrow function equivelant
+// let averageArrow = (num1, num2) => {
+//   let avg = (num1 + num2) / 2;
+//   return avg;
+// };
 
-// implicit return, no curlies needed
-let logName = (name) => name;
+// arrow function with implicit return
+// let averageArrow = (num1, num2) => (num1 + num2) / 2;
 
-// console.log(logName("Edward"));
+// console.log(averageArrow(3, 7));
 
-// indexing into an array
-let arr = [1, 2, 3, 4];
+//keying into arr example
+// let arr = [1, "string", {}, averageArrow];
+
 // console.log(arr[0]);
 
-// let obj = { key: "value" };
-// // keying into an object
-// console.log(obj.key);
+// keying into objects examples
+// let obj = {
+//   name: "Edward",
+//   lastName: "Felipe",
+// };
+
+// console.log(obj);
+
+// console.log(obj);
 
 // let person = {
 //   firstName: "Blake",
@@ -34,31 +40,22 @@ let arr = [1, 2, 3, 4];
 //   hobbies: ["coding", "hiking", "video games"],
 // };
 
-// console.log(person.firstName, person.lastName);
 
-// console.log(person.address);
-// person.address = "test123";
-// console.log(person.hobbies[0].toUpperCase());
+// console.log(person.hobbies.length);
 
-// console.log(person);
-// person.firstName = "Edward";
-// console.log(person);
+// let arr = person.hobbies;
 
-// console.log(person.hobbies);
-// person.hobbies.push("watching anime");
-// console.log(person, person.hobbies);
+// console.log(arr);
 
-// assigning a array that is located inside of an object to a variable
-// will mutate the objects array and the variables array
-// let hobbies = person.hobbies;
+// arr.push("watching anime");
+// console.log(arr, person);
 
-// to avoid this make a copy of this array using slice
-// let hobbies = person.hobbies.slice();
+// let copy = person.hobbies.slice();
 
-// hobbies.push("watching anime");
-// // console.log(hobbies);
+// copy.push("watching anime");
 
-// console.log(person.hobbies);
+// console.log(copy, person);
+
 
 // let person = {
 //   firstName: "Blake",
@@ -68,23 +65,34 @@ let arr = [1, 2, 3, 4];
 //   hobbies: ["coding", "hiking", "video games"],
 // };
 
-// let address = "address";
-// bracket notation looks for the variable
-// person[address] = "test123";
 
-// dot notation doesnt care about the variable and will use whatever letter that come
-// after the period to assign/reassign
-// person.address = "test123"
-// console.log(person.address);
+// // keying in with bracket notation
+// // let namee = "firstName";
+// console.log(person.firstName);
+// console.log(person["firstName"]);
+// console.log(person[namee]);
+
+let car = {};
+
+let colorVar = "color";
+
+// car.colorVar = "blue";
+
+// car.color = "blue"; ✅
+
+// car[colorVar] = "blue"; ✅
+
+// car[0] = "blue";
+
+// console.log(car);
+
 // let cat = {};
 // let myKey = "color";
 
 // cat.myKey = "orange";
-// console.log(cat.color);
 
-// let lion = { name: "Simba" };
+// console.log(cat.myKey);
 
-// console.log(lion["color"] === undefined); // => ???
 
 // let person = {
 //   firstName: "Blake",
@@ -94,17 +102,42 @@ let arr = [1, 2, 3, 4];
 //   hobbies: ["coding", "hiking", "video games"],
 // };
 
-// // cant use normal for loop
 // for (let i = 0; i < person.length; i++) {
-//   console.log(person.firstName);
+//   console.log("were running");
 // }
 
-//
 // console.log(person.length);
 
 // for (let key in person) {
 //   console.log(key, person[key]);
-//   console.log(key, person.key);
+
+// }
+
+// let person = {
+//   firstName: "Blake",
+//   lastName: "Watts",
+//   dog: "paisley",
+//   age: 28,
+//   hobbies: ["coding", "hiking", "video games"],
+//   printName: (name) => console.log(name),
+// };
+
+// person.printName("edward");
+
+// console.log(Object.keys(person));
+// console.log(Object.values(person));
+// console.log(Object.entries(person));
+
+let values = Object.values(person);
+
+// console.log(values);
+
+// for (let i = 0; i < values.length; i++) {
+//   let value = values[i];
+//   if (value === "Watts") {
+//     return console.log("we got it", i);
+//   }
+
 // }
 
 let person = {
@@ -116,20 +149,10 @@ let person = {
   printName: (name) => console.log(name),
 };
 
-// let printName = (name) => console.log(name);
-// person.printName("Blake");
 
-// console.log(person.keys());
-// console.log(Object.keys(person));
+let hobbies = ["coding", "hiking", "video games"];
 
-// console.log(Object.values(person));
+for (let key in person) {
+  console.log(key);
+}
 
-// let personVals = Object.values(person);
-
-// console.log(personVals);
-
-// console.log(Object.entries(person));
-
-delete person.hobbies;
-
-console.log(person);
