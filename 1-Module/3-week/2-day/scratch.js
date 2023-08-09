@@ -3,6 +3,7 @@ let average = function (num1, num2) {
   return avg;
 };
 
+
 // console.log(average(3, 7));
 
 // arrow function equivelant
@@ -30,6 +31,7 @@ let average = function (num1, num2) {
 // console.log(obj);
 
 // console.log(obj);
+
 // let person = {
 //   firstName: "Blake",
 //   lastName: "Watts",
@@ -37,6 +39,7 @@ let average = function (num1, num2) {
 //   age: 28,
 //   hobbies: ["coding", "hiking", "video games"],
 // };
+
 
 // console.log(person.hobbies.length);
 
@@ -53,6 +56,7 @@ let average = function (num1, num2) {
 
 // console.log(copy, person);
 
+
 // let person = {
 //   firstName: "Blake",
 //   lastName: "Watts",
@@ -60,6 +64,7 @@ let average = function (num1, num2) {
 //   age: 28,
 //   hobbies: ["coding", "hiking", "video games"],
 // };
+
 
 // // keying in with bracket notation
 // // let namee = "firstName";
@@ -80,11 +85,14 @@ let colorVar = "color";
 // car[0] = "blue";
 
 // console.log(car);
+
 // let cat = {};
 // let myKey = "color";
 
 // cat.myKey = "orange";
+
 // console.log(cat.myKey);
+
 
 // let person = {
 //   firstName: "Blake",
@@ -93,13 +101,16 @@ let colorVar = "color";
 //   age: 28,
 //   hobbies: ["coding", "hiking", "video games"],
 // };
+
 // for (let i = 0; i < person.length; i++) {
 //   console.log("were running");
 // }
+
 // console.log(person.length);
 
 // for (let key in person) {
 //   console.log(key, person[key]);
+
 // }
 
 // let person = {
@@ -126,6 +137,7 @@ let values = Object.values(person);
 //   if (value === "Watts") {
 //     return console.log("we got it", i);
 //   }
+
 // }
 
 let person = {
@@ -137,8 +149,10 @@ let person = {
   printName: (name) => console.log(name),
 };
 
+
 let hobbies = ["coding", "hiking", "video games"];
 
 for (let key in person) {
   console.log(key);
 }
+
