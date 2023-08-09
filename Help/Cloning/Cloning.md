@@ -1,4 +1,4 @@
-# Clone-Share-Repo
+# Cloning-A-Repo
 - In this md file, we will cover how to Clone, change, and then share a repo between yourself and your partner for pair programming purposed.
 - We will be using your very first POJO proctice in these examples, if you need ot clone another repo, then follow these steps on that repo instead.
 
