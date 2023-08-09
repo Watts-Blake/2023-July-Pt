@@ -5,10 +5,14 @@
 ## Steps for Cloning
 - 1.) Go to the repositories address on github, in this case, we will be using
 - [https://github.com/appacademy/practice-for-week-02-pojo_basics](https://github.com/appacademy/practice-for-week-02-pojo_basics)
-- 2.) Click on the green code button
+- 2.) Click on the green code button.
+
 ![Alt text](Screenshot%202023-08-09%20134548.png)
-- 3.) Verify you are using the auth that you have setup, default is typically HTTPS so leaving this option highlited is fine, if you have changed to ssh, then click this option instead
+
+- 3.) Verify you are using the auth that you have setup, default is typically HTTPS so leaving this option highlited is fine, if you have changed to ssh, then click this option instead.
+
 ![Alt text](Screenshot%202023-08-09%20134748.png)
+
 - 4.) Click the copy button next to the url in the bottom right
 
 - 5.) Open up your terminal, navigate to where you would like to store this repo locally and type in git clone, then paste what you just copied from github
