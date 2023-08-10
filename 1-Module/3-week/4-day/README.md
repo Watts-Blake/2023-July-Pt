@@ -93,7 +93,7 @@ console.log(speak(...words)); // => I like to go running with Jet.
 
 <br/>
 
-## Destructuring
+## Destructuring [MDN Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
 The destructuring assignment syntax allows you to extract parts of an array or object into distinct variables.
 
 ```
