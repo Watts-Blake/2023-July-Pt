@@ -26,34 +26,51 @@ git clone https://github.com/appacademy/practice-for-week-02-pojo_basics.git
 ```
 rm -rf .git
 ```
-- 7.) Initialize your new local git repo, add all files in repo to staging, then commit
+- 7.) NPM install and add .gitignore
+    - run these command in the root of this dir to in node packages and create .gitignore
+```
+npm install
+touch .gitignore
+```
+- open your .gitignore and add your /node_modules on line 1
+```
+/node_modules
+```
+- 8.) Initialize your new local git repo, add all files in repo to staging, then commit
     - run these commands
 ```
 git init
 git add .
 git commit -m 'first commit'
 ```
-- 8.) Create a Github Repo to connect your local git repo to.
+- 9.) Create a Github Repo to connect your local git repo to.
     - Make sure you are signed into github
     - navigate to this url
     - [https://github.com/new](https://github.com/new)
 ![Alt text](Screenshot%202023-08-09%20140113.png)
-- 9.) Finish Creating repo
+- 10.) Finish Creating repo
     - Choose yourself as an owner
     - Give your repo a name
     - Click Create repository in the bottom right of screenshot!
-- 10.) Copy the commands in the second option of the below screenshot
+- 11.) Copy the commands in the second option of the below screenshot
 ![Alt text](Screenshot%202023-08-09%20140515.png)
 
     - Navigate back to your terminal and past these commands
     - If you receive an error when pasting the commands all at once, please attempt pasting them one at a time
     - After you have pasted to last command and it has finished running, navigate back to your broswer, refresh your github page, and verify the correct things were added to this repo
 
-- 11.) If you are sharing this newly created repo with a a partner, please follow the md in the Sharing directory
-    - If not, every time you are done with a problem, or maybe hit a checkpoint such as being finished for the day, make sure to add, commit and push.
+- 12.) If you are sharing this newly created repo with a a partner, please follow the md in the Sharing directory
+    - If not, every time you are done with a problem, or maybe hit a checkpoint such as being finished for the day, make sure to add, commit and push, and your partner pulls.
     - you can do this by running these below commands
 ```
+# you
+
 git add .
 git commit -m 'add your descriptive commit message of what you did'
 git push
+```
+```
+# partner
+
+git pull
 ```
