@@ -118,6 +118,13 @@ ourFunc();
 ```
 <br/>
 
+## Short Solo Practices 30 mins
+- [Refactoring Variables](https://open.appacademy.io/learn/js-py---pt-jul-2023-online/week-4---callbacks--scope-and-closure/refactoring-variables)
+- [Js Variables Quiz](https://open.appacademy.io/learn/js-py---pt-jul-2023-online/week-4---callbacks--scope-and-closure/javascript-variables-quiz)
+- [Scope Debugging](https://open.appacademy.io/learn/js-py---pt-jul-2023-online/week-4---callbacks--scope-and-closure/scope-debugging)
+- [Scope Debugging Quiz](https://open.appacademy.io/learn/js-py---pt-jul-2023-online/week-4---callbacks--scope-and-closure/scope-debugging-quiz)
+- [Scope Quiz](https://open.appacademy.io/learn/js-py---pt-jul-2023-online/week-4---callbacks--scope-and-closure/scope-quiz)
+<br/>
 ## Closures
 What is a closure? This question is one of the most frequent interview questions where JavaScript is involved. If you answer this question quickly and knowledgeably you'll look like a great candidate. We know you want to know it all so let's dive right in!
 
@@ -167,10 +174,10 @@ console.log(counter2()); // => 1
 <br/>
 
 # Paired Practice Until EOD
-[Callbacks Project](https://github.com/appacademy/practice-for-week-02-try-out-callbacks/tree/main)
+[Scope Project](https://github.com/appacademy/practice-for-week-02-scope)
 <br/>
 
 
-# [Formative Quiz](https://open.appacademy.io/learn/js-py---pt-jul-2023-online/week-4---callbacks--scope-and-closure/formative-quiz---monday--repeat-) - 10 minutes
+# [Formative Quiz](https://open.appacademy.io/learn/js-py---pt-jul-2023-online/week-4---callbacks--scope-and-closure/formative-quiz---thursday--repeat-) - 10 minutes
 
 # EOD
