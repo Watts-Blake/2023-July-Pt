@@ -125,6 +125,7 @@ ourFunc();
 - [Scope Debugging Quiz](https://open.appacademy.io/learn/js-py---pt-jul-2023-online/week-4---callbacks--scope-and-closure/scope-debugging-quiz)
 - [Scope Quiz](https://open.appacademy.io/learn/js-py---pt-jul-2023-online/week-4---callbacks--scope-and-closure/scope-quiz)
 <br/>
+
 ## Closures
 What is a closure? This question is one of the most frequent interview questions where JavaScript is involved. If you answer this question quickly and knowledgeably you'll look like a great candidate. We know you want to know it all so let's dive right in!
 
