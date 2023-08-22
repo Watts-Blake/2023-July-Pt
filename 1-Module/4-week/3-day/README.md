@@ -93,10 +93,11 @@ const ourFunc = () => {
     arr
   );
   for (let i = 0; i < 10; i++) {
-    var str = "declared with const, can not be reassing and is block scoped";
+    var str = "declared with var and is function scoped";
+    // with var you can reassing or mutate
     string = "reassignment";
     console.log(str);
-    // notice that you still can mutate that data if it is able to be mutated
+
     var arr = [1, 2, 3, 4];
     arr[0] = "we mutated";
     console.log(arr);

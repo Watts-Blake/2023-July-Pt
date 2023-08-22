@@ -1,3 +1,4 @@
+
 // let func = function (firstArg) {
 //   return function (secondArg) {
 //     console.log(firstArg(secondArg));
@@ -50,6 +51,7 @@ let global = "global name space";
 // console.log(variable);
 
 // for (let i = 0; i < 1; i++) {
+
 //   const str = "declared with const, can not be reassing and is block scoped";
 //   // str = {};
 //   // console.log(str);
@@ -70,6 +72,7 @@ let global = "global name space";
 //     arr
 //   );
 //   for (let i = 0; i < 10; i++) {
+
 //     var str = "declared with var and is function scoped";
 //     // with var you can reassing or mutate
 //     string = "reassignment";
@@ -112,6 +115,7 @@ let global = "global name space";
 
 // incrementCounter2();
 // incrementCounter2();
+
 
 function createCounter() {
   let count = 0;
