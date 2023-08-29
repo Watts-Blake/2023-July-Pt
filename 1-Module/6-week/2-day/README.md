@@ -14,6 +14,7 @@
 
 ## Paired Practice Until EOD
 [Guessing Game Project pt 1](https://open.appacademy.io/learn/js-py---pt-jul-2023-online/week-6---async--node-vs--browser/guessing-game-project-pt-1)
+
 [Guessing Game Project pt 2](https://open.appacademy.io/learn/js-py---pt-jul-2023-online/week-6---async--node-vs--browser/guessing-game-project-pt-2--bonus-)
 
 
