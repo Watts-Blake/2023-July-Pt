@@ -1,7 +1,7 @@
 # M1Wk6D2 Async, Node vs Browser
 <br/>
 
-## [Learning Boost](https://open.appacademy.io/learn/js-py---pt-jul-2023-online/week-6---async--node-vs--browser/learning-boost---monday) 5 Min
+## [Learning Boost](https://open.appacademy.io/learn/js-py---pt-jul-2023-online/week-6---async--node-vs--browser/learning-boost---tuesday) 5 Min
 <br/>
 
 ### Reading and Videos 30 mins
