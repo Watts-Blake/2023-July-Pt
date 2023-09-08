@@ -1,44 +1,50 @@
 // const lambo = {
-//   make: "lamborghini",
+//   make: "lambo",
 //   model: "aventador",
 //   color: "black",
 //   logInfo: () => console.log(`${lambo.make}, ${lambo.model}, ${lambo.color}`),
 // };
-
+// // console.log(lambo);
 // lambo.logInfo();
 
-// const arr = [1, 2, 3, 4];
-// console.log(typeof arr);
+// const ford = {};
 
 // class Car {}
-
-// // console.log(Car);
+// console.log(Car);
 
 // const lambo = new Car();
 
 // console.log(lambo);
+
+// lambo.make = "lambo";
+
+// console.log(lambo);
+
 // class Car {
 //   constructor(make, model, color) {
+//     console.log(this);
 //     this.make = make;
+//     console.log(this);
 //     this.model = model;
+//     console.log(this);
 //     this.color = color;
+//     console.log(this);
 //   }
 // }
 
-// // console.log(Car);
-
 // const lambo = new Car("lambo", "aventador", "black");
-
 // const ford = new Car("ford", "mustang", "silver");
-
 // console.log(ford);
+
 // console.log(lambo);
 
+// lambo.make = "lambo";
+
 // const arr = [1, 2, 3, 4];
-// console.log(ford instanceof Car);
 
 // console.log(arr instanceof Array);
-
+// console.log(arr instanceof Car);
+// console.log(lambo instanceof Car);
 // class Car {
 //   constructor(make, model, color) {
 //     this.make = make;
@@ -49,16 +55,15 @@
 //     console.log(`${this.make}, ${this.model}, ${this.color}`);
 //   }
 // }
-
 // const lambo = new Car("lambo", "aventador", "black");
-
-// // console.log(lambo);
 // const ford = new Car("ford", "mustang", "silver");
 // // lambo.logInfo();
-// ford.logInfo();
+// // ford.logInfo();
 
+// console.log(Car);
 // class Car {
 //   static allInstances = [];
+
 //   constructor(make, model, color) {
 //     this.make = make;
 //     this.model = model;
@@ -68,77 +73,90 @@
 //   logInfo() {
 //     console.log(`${this.make}, ${this.model}, ${this.color}`);
 //   }
-//   static printAllInstances() {
+
+//   static logAllInstances() {
 //     for (let car of Car.allInstances) {
-//       console.log(car);
+//       console.log(`${car.make}, ${car.model}, ${car.color}`);
 //     }
 //   }
-// }
 
+//   static findCar(carModel) {
+//     const car = Car.allInstances.find((car) => car.model === carModel);
+//     return car;
+//   }
+// }
 // const lambo = new Car("lambo", "aventador", "black");
 // const ford = new Car("ford", "mustang", "silver");
-// // console.log(Car);
-// // lambo.logInfo();
-// // ford.logInfo();
 
-// Car.printAllInstances();
+// lambo.logInfo();
+// ford.logInfo();
+
+// console.log(Car);
+// console.log(Car.findCar("mustang"));
+
+// Car.logAllInstances();
 
 // class Animal {
 //   constructor(name, sound) {
 //     this.name = name;
 //     this.sound = sound;
 //   }
-
 //   speak() {
 //     console.log(this.sound);
 //   }
-
-//   static pet(animal) {
-//     console.log(`You attempt to pet ${animal.name}`);
-//   }
 // }
 
-// class Dog extends Animal {
-//   // constructor inherited from Animal so no need to define one here
-// }
+// class Dog extends Animal {}
 
-// const fluffy = new Dog("Fluffy", "woof");
-// fluffy.speak(); // woof
-// Dog.pet(fluffy); // You attempt to pet Fluffy
+// const paisley = new Dog("paisley", "woof woof gurrrrr im dawg");
+
+// class Cat extends Animal {}
+
+// const tommySocks = new Cat("tommy", "pur pur");
+// // console.log(paisley);
+// // console.log(paisley instanceof Dog);
+// // console.log(paisley instanceof Animal);
+// // console.log(tommySocks instanceof Animal);
+// // console.log(tommySocks instanceof Cat);
+// // console.log(tommySocks instanceof Dog);
+
+// tommySocks.speak();
+// paisley.speak();
 
 class Animal {
   constructor(name, sound) {
     this.name = name;
     this.sound = sound;
   }
-
   speak() {
     console.log(this.sound);
-  }
-
-  static pet(animal) {
-    console.log(`You attempt to pet ${animal.name}`);
   }
 }
 
 class Dog extends Animal {
   constructor(name) {
-    super(name, "woof");
+    super();
+    this.name = name;
+    this.sound = "woof";
+  }
+  fetchABone() {
+    console.log(`${this.name} fetches a bone`);
   }
 }
 class Cat extends Animal {
   constructor(name) {
-    super(name, "meow");
+    super(name);
+    this.sound = "purrrrRRRRrrrRRRRR";
   }
 }
 
-const fluffy = new Dog("Fluffy");
-const tommySocks = new Cat("Tommy");
-// console.log(tommySocks);
-// console.log(fluffy);
-// fluffy.speak(); // woof
-// Dog.pet(fluffy); // You attempt to pet Fluffy
+const paisley = new Dog("paisley", "ahasbkjhdbhjasbdjhbasjhd");
 
-// console.log(fluffy instanceof Cat);
+paisley.fetchABone();
 
-module.exports = { Dog, Cat };
+const tommy = new Cat("tommy", "purrr");
+
+// tommy.fetchABone();
+
+console.log(paisley, "from scratch line 62");
+module.exports = { Dog, Animal, Cat };
