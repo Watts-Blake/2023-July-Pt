@@ -231,9 +231,9 @@ try {
 
 ## [Error Types Quiz](https://open.appacademy.io/learn/js-py---pt-jul-2023-online/week-8---context-and-tdd/error-types-quiz) 10 - mins
 
-## [Error Handling Quiz](https://open.appacademy.io/learn/js-py---pt-jul-2023-online/week-8---context-and-tdd/error-handling-quiz) 10 min
+## [Error Handling Quiz](https://open.appacademy.io/learn/js-py---pt-jul-2023-online/week-8---context-and-tdd/error-handling-quiz) - 10 mins
 
-## Solo Practice [Error Handling](https://open.appacademy.io/learn/js-py---pt-jul-2023-online/week-8---context-and-tdd/practice--error-handling)[20 min]
+## Solo Practice [Error Handling](https://open.appacademy.io/learn/js-py---pt-jul-2023-online/week-8---context-and-tdd/practice--error-handling)- 20 mins
 
 <br/>
 
