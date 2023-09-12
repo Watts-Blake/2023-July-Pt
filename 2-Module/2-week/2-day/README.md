@@ -1,4 +1,4 @@
-# M2Wk2D1 Context TDD
+# M2Wk2D2 Context TDD
 
 ## [Learning Boost](https://open.appacademy.io/learn/js-py---pt-jul-2023-online/week-8---context-and-tdd/learning-boost---tuesday) 5 Min
 
