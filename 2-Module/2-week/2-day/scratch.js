@@ -16,7 +16,16 @@
 // }
 
 // const laundry = new Task("laundry");
+// console.log(laundry.taskList);
 // console.log(Task.taskList);
+
+// class Dog {
+//     constructor(name) {
+//         this.name = name
+//     }
+// }
+
+// const paisley = new Dog()
 
 // class Cat {
 //   constructor(name, toys) {
@@ -28,24 +37,24 @@
 //   }
 
 //   purrMore() {
+//     console.log(this);
 //     this.purr();
 //   }
 // }
-
 // let cat = new Cat("tommySocks", [
 //   "laser pointer",
 //   "flopping fish",
 //   "anything on the edge of a counter",
 // ]);
 
-// global.setTimeout(cat.purrMore, 5000);
+// const unboundPurr = cat.purrMore;
+// const boundPurr = unboundPurr.bind(cat);
 
-// const unboundPurrMore = cat.purrMore;
-// const boundPurrMore = unboundPurrMore.bind(cat);
-// // global.setTimeout(boundPurrMore, 5000);
-// // const boundPurr = () => cat.purrMore.apply(cat);
-// // global.setTimeout(() => cat.purrMore.apply(cat), 2000);
+// global.setTimeout(boundPurr, 2000);
+
 // global.setTimeout(() => cat.purrMore.call(cat), 2000);
+// global.setTimeout(() => cat.purrMore.apply(cat), 2000);
+// global.setTimeout(() => cat.purrMore(), 2000);
 
 class Cat {
   constructor(name, toys) {
@@ -57,15 +66,10 @@ class Cat {
   }
 
   purrMore() {
+    console.log(this);
     this.purr();
   }
 }
-
-let cat = new Cat("tommySocks", [
-  "laser pointer",
-  "flopping fish",
-  "anything on the edge of a counter",
-]);
 
 class Dog {
   constructor(name, toys) {
@@ -87,63 +91,51 @@ const paisley = new Dog("Paisley", [
   "creepy lamb thing",
 ]);
 
-// Dog.logToys.apply(paisley, [paisley.toys]);
-// Dog.logToys.call(paisley, paisley.toys);
+let cat = new Cat("tommySocks", [
+  "laser pointer",
+  "flopping fish",
+  "anything on the edge of a counter",
+]);
 
+// Dog.logToys(paisley.toys);
+// Dog.logToys.call(paisley, paisley.toys);
+// Dog.logToys.apply(paisley, [paisley.toys]);
+// // Dog.logToys.call(cat, cat.toys);
 // Dog.logToys.apply(cat, [cat.toys]);
 
-// cat.purr.apply(paisley);
+// const str = "ima string";
 
-// function broken() {
-//   // Uncaught SyntaxError: Unexpected identifier
-//   console.log("I'm broke");
-// }
+// str.push("121312312321");
 
-// function broken() {
-//   // Uncaught SyntaxError: Unexpected identifier
-//   console.log("I'm broke");
-// } // Uncaught SyntaxError: Unexpected token '}'
-// function callPuppy() {
-//   const puppy = "puppy";
-//   console.log(puppy);
-// }
+// console.log("i am runnig ");
 
-// callPuppy();
+const ourError = new Error("im a young error");
 
-let str = "ashgdhjagsjdhgajshd";
+const ourTypeError = new TypeError("im a young type error");
 
-let arr = [1, 2, 3, 4];
+// console.log(ourError);
 
-arr.push(5);
-// str.push("ashgdjhasgd");
-
-const ourError = new Error("This is our error");
-
-const ourRefErro = new ReferenceError("This our reference error");
-
-console.log(ourRefErro);
 // try {
-//   throw ourRefErro;
-//   console.log();
-// } catch (error) {
-//   //   console.log(error);
-//   console.error(error);
+//   throw ourError;
+// } catch (err) {
+//   console.log(err.message);
 // } finally {
-//   console.log("test");
+//   console.log("im a running after the log of our error");
 // }
 
-function callRecursion(arg) {
-  callRecursion();
-  console.log("after our recursive call");
-}
+const ourRecurse = () => {
+  ourRecurse();
+};
 
 try {
-  callRecursion();
-  console.log("after our function invocation");
-} catch (error) {
-  console.error(error);
-} finally {
-  console.log("were done and our program is running");
+  ourRecurse();
+} catch (err) {
+  console.log(err.message);
 }
+// try {
+//   module.exports = ourFunc;
+// } catch (err) {
+//   console.log(err.message);
+// }
 
-console.log("completed");
+console.log("were continuning to run");
