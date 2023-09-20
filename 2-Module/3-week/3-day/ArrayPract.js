@@ -13,11 +13,16 @@ function randomNumberArr(max) {
   for (let i = 0; i < max; i++) {
     const randomNumber = Math.floor(Math.random() * Math.floor(max));
 
+    const startTime = performance.now();
     res.push(randomNumber);
+    const endTime = performance.now();
+    console.log(endTime - startTime);
   }
 
   return res;
 }
+
+// randomNumberArr(100);
 /*
 Use the randomNumberArr function and the following pushTest
 function to test the runtime of JavaScript's push with different
@@ -73,15 +78,19 @@ complexity of Array's pop method.
 
 // 3. ) arr.shift()
 
-function shiftTest(arr) {
+const shiftTest = async (arr) => {
   const n = arr.length;
 
   for (let i = 0; i < n; i++) {
-    arr.shift();
+    const startTime = performance.now();
+    await arr.shift(i);
+    const endTime = performance.now();
   }
 
   return arr;
-}
+};
+
+shiftTest(randomNumberArr(10000));
 
 /*
 Before running the test, what do you think the
