@@ -1,251 +1,173 @@
-# M2Wk3D2 Big-O
+# M2Wk3D4 Number Bases && Arrays && Stacks
 
-## [Learning Boost](https://open.appacademy.io/learn/js-py---pt-jul-2023-online/week-9---big-o/learning-boost---tuesday) 5 Min
-
-<br/>
-
-## Efficient Coding
-So far in this program we have learned how to solve problems through coding. But we have yet to talk about solving our code in a more efficient manner.
-
-In simple terms more efficient code has a lower number of times it does something. This will be referred to as n's or n times.
-
-We can test how efficient our code is a couple of ways.
-
-- Timing benchmarks
-
-```
-function addTwoNums(num1, num2) {
-  let total = 0;
-
-  for (let i = 0; i < num1; i++) {
-    total += 1;
-  }
-
-  for (let i = 0; i < num2; i++) {
-    total += 1;
-  }
-
-  return total;
-}
-
-startTime = Date.now();
-addTwoNums(1234, 5678);
-endTime = Date.now();
-
-// startTime = Date.now();
-// addTwoNums(1234567890, 1234567890);
-// endTime = Date.now();
-
-// startTime = performance.now();
-// addTwoNums(1234, 5678);
-// endTime = performance.now();
-
-console.log(`Runtime: ${endTime - startTime}ms`);
-
-```
-
-- Make our lives easy and use Big-O notation
-
-## Intro to Big-O Time Complexity
-The "O" in big-O stands for "order" which means that it is not concerned with exact values: instead, it is used to describe the general shape of the growth curve.
-
-Typical growth curves are
-
-### Linear - O(n) ![Alt text](images/linear_growth.jpg)
-
-When an algorithm has a time complexity of O(n)
-it means that the time it takes to execute the algorithm grows linearly with the size of the input. In other words, if the input size doubles, the time taken to execute the algorithm will also roughly double.
-
-```
-function addNums(n) {
-  total = 0;
-
-  for (let i = 1 ; i <= n ; i++) {
-    total += i;
-  }
-
-  return total;
-}
-```
+## [Learning Boost](https://open.appacademy.io/learn/js-py---pt-jul-2023-online/week-9---big-o/learning-boost---thursday) 5 Min
 
 <br/>
 
-### Quadratic - O(n^2) ![Alt text](images/quadratic_growth.jpg)
+## Binary
 
-When an algorithm has a time complexity of O(n^2)
-it means that the number of operations required to execute the algorithm is roughly proportional to the square of the size of the input. This implies that as the input size increases, the time taken by the algorithm increases quadratically.
+### Base-10 : Decimal
+Base-10 refers to how many digits there are in the counting system: 0-9 in this case.
+```
+00
+01
+02
+03
+04
+05
+06
+07
+08
+09
+10
+11
+12
+```
+
+### Base-2 (Binary)
+Binary is another word for base-2. In this base, there are only two digits: 0 and 1.
+Binary numbers are prepended with an 0b to differentiate them as binary.
 
 ```
-function addNums(n) {
-  total = 0;
+0000 (0)
+0001 (1)
+0010 (2)
+0011 (3)
+0100 (4)
+0101 (5)
+0110 (6)
+0111 (7)
+1000 (8)
+```
+#### Converting Binary to Decimal
+When converting Binary to Decimal, we need to take a look at each of our binary numbers.
 
-  for (let i = 1 ; i <= n ; i++) {
-    total += i;
-  }
+Depending on the position we will use 2 to the power of its position in our number and multiply it by the number in its position starting at the end
 
-  return total;
-}
+After doing this for all our numbers we will add them together
 
-function addManyNums(n) {
+```
+// lets try converting Binary to Decimal
 
-  let total = 0;
+0b1100111010
+2^0 * 0 = 1 * 0 = 0
+2^1 * 1 = 2 * 1 = 2
+2^2 * 0 = 4 * 0 = 0
+2^3 * 1 = 8 * 0 = 8
+2^4 * 1 = 16 * 1 = 16
+2^5 * 1 = 32 * 1 = 32
+2^6 * 9 = 64 * 0 = 0
+2^7 * 0 = 128 * 0 = 0
+2^8 * 1 = 256 * 1 = 256
+2^9 * 1 = 512 * 1 = 512
 
-  for (let i = 0 ; i < n ; i++) {
-    total += addNums(i);
-  }
+2 + 8 + 16 + 32 + 256 + 512 = 826
 
-  return total;
-}
+// Decimal to Binary
+// To do this we will need to divide our number by 2 and use the remainder to keep trak of our binary numbers
+
+
+203
+
+203/2 = 101 R1
+101/2 = 50 R1
+50/2 = 25 R0
+25/2 = 12 R1
+12/2 = 6 R0
+6/2 = 3 R0
+3/2 = 1 R1
+1/2 = 0 R1
+
+0b11001011
+
+```
+
+### Base-16 (Hexidecimal)
+The digits are 0-9 with A, B, C, D, E, and F representing 10, 11, 12, 13, 14, and 15, respectively. Hexadecimal numbers (sometimes called 'hex' for short) are prepended with an 0x to differentiate them as base-16.
+
+```
+ 0 = 0b0000 = 0x0
+ 1 = 0b0001 = 0x1
+ 2 = 0b0010 = 0x2
+ 3 = 0b0011 = 0x3
+ 4 = 0b0100 = 0x4
+ 5 = 0b0101 = 0x5
+ 6 = 0b0110 = 0x6
+ 7 = 0b0111 = 0x7
+ 8 = 0b1000 = 0x8
+ 9 = 0b1001 = 0x9
+10 = 0b1010 = 0xA
+11 = 0b1011 = 0xB
+12 = 0b1100 = 0xC
+13 = 0b1101 = 0xD
+14 = 0b1110 = 0xE
+15 = 0b1111 = 0xF
+16 = 0b10000 = 0x10
+```
+#### Converting Hexidecimal
+We can use the same way we used binary to do this, but instead of using 2 to the power of our numbers position we will now use 16
+
+
+### Representing letters in binary (ASCII) [Docs](https://www.asciitable.com/)
+To represent characters, each byte value is matched up with a character according to a standard encoding. The most common English standard is ASCII, which stands for "American Standard Code for Information Interchange".
+
+<br/>
+
+## Using Javascript Builtin Conversions
+There are several built-in JavaScript conversion methods can be used for converting binary. Each one has its specific use cases.
+
+### parseInt()[MDN Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt)
+The parseInt() function parses a string argument and returns an integer of the specified radix (the base in mathematical numeral systems).
+
+```
+parseInt('a1', 16);  // 161
+parseInt(`1011`, 2); // 11
+```
+
+### toString()[MDN Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toString)
+The toString() method of Number values returns a string representing this number value.
+
+```
+const decimal = parseInt('a1', 16); // 161
+const hexadecimal = decimal.toString(16); // 'a1'
+const binary = decimal.toString(2) // '10100001'
+```
+
+### String.fromCharCode()[MDN Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/fromCharCode)
+The String.fromCharCode() static method returns a string created from the specified sequence of UTF-16 code units (16-bit Unicode Transformation Format)
+
+```
+String.fromCharCode(65); // A;
+String.fromCharCode(66); // B;
+String.fromCharCode(67); // C;
+```
+
+### String.prototype.charCodeAt()[MDN Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/charCodeAt)
+
+```
+const str = 'ABC';
+const str = 'ABC';
+str.charCodeAt(0); // 65
+str.charCodeAt(1); // 66
+str.charCodeAt(2); // 67
 ```
 
 <br/>
 
-### Constant - O(1) ![Alt text](images/constant_growth.jpg)
+## Short Practices 50 mins
+- [Binary and Hexadecimal Practice](https://open.appacademy.io/learn/js-py---pt-jul-2023-online/week-9---big-o/binary-and-hexadecimal-practice) 15 - mins
 
-When an algorithm has a time complexity of O(1)
-it means that the number of operations required to execute the algorithm remains constant, regardless of the size of the input. This implies that the algorithm's performance does not degrade as the input size increases.
+- [Advanced Conversion Functions](https://open.appacademy.io/learn/js-py---pt-jul-2023-online/week-9---big-o/memory-practice) - 15 mins
 
-```
-function addFirstAndLast(nums) {
-
-  const firstNum = nums[0];
-  const lastNum = nums[nums.length - 1];
-
-  return firstNum + lastNum;
-}
-```
-<br/>
-
-### Nested Loops vs. Adjacent
-Nested loops are an easy way to identify that you may be doing something n to the power of nested loop times
-
-```
-function printPairSums(n) {
-
-  for (let i = 0 ; i < n ; i++) {
-
-    for (let j = 0 ; j < n ; j++) {
-      console.log(`${i} + ${j} = ${i + j}`);
-    }
-
-  }
-}
-```
-We can identify that this function has a Big O of O(n^2)
-This is because
-
-The outer loop runs n times
-For each of those n iterations, the inner loop runs
-n times as well
-So, the total number of iterations is n * n otherwise known as O(n^2)
-
-<br/>
-
-Now if we do this with three nested loops
-
-```
-function printTripleSums(n) {
-
-  for (let i = 0 ; i < n ; i++) {
-
-    for (let j = 0 ; j < n ; j++) {
-
-      for (let k = 0 ; k < n ; k++) {
-        console.log(`${i} + ${j} + ${k} = ${i + j + k}`);
-      }
-    }
-  }
-}
-```
-We can identify that this function has a Big O of O(n^3)
-This is because
-
-The outer loop runs n times
-For each of those n iterations, the first inner loop runs
-n times as well
-Now for each of those inner loop iterations the inner most loop will run n times as well
-So, the total number of iterations is n * n * n otherwise known as O(n^3)
-
-#### Adjacent Loops
-You may think that it shouldnt be much different with adjacent loops but it is.
-
-```
-function printNumbersTwice(n) {
-
-  for (let i = 0 ; i < n ; i++) {
-    console.log(i);
-  }
-
-  for (let j = 0 ; j < n ; j++) {
-    console.log(j);
-  }
-}
-```
-If we have two loops that are next to eachother and not nested than we only perform two seperate loops a constant n amount of times
-
-This would simplify down to n + n which would technically be O(2n)
-
-In big o notation we dont care about the small number of constant operations we are performing, so we would continue to simplify this down to O(N)
-
-## Space Complexity
-Space complexity is closely related to time complexity. Both describe the performance of code in relation to the input size and both are expressed using big-O notation. The difference is that space complexity describes how much memory the function requires.
-
-#### Linear space complexity O(n)
-
-```
-function getNumList(n) {
-    let nums = [];
-
-    for (let i = 0 ; i < n ; i++) {
-        nums.push(i);
-    }
-
-    return nums;
-}
-```
-Let nums = [] creates an empty array that brings us to O(1)
-Our loop pushes into this array on every iteration adding space + 1 n amount of times
-Which means we are creating space on every
-So our Space Complexity would be O(n)
-
-
-```
-function getNumPairsList(n) {
-    let pairs = [];
-
-    for (let i = 0 ; i < n ; i++) {
-        for (let j = 0 ; j < n ; j++) {
-            pairs.push([i, j]);
-        }
-    }
-
-    return pairs;
-}
-```
-
-
-<br/>
-
-## Reading && Practices 35 mins
-- [Intro to Computer Science](https://open.appacademy.io/learn/js-py---pt-jul-2023-online/week-9---big-o/intro-to-computer-science) 5 - mins
-
-- [Timing Benchmarks](https://open.appacademy.io/learn/js-py---pt-jul-2023-online/week-9---big-o/timing-benchmarks) - 5 mins
-
-- [Timing Practice part 1](https://open.appacademy.io/learn/js-py---pt-jul-2023-online/week-9---big-o/timing-benchmarks-practice-part-1) - 20 mins
-    - 15 min Q&A
-
-## Reading && Practices 20 mins
-- [Timing Practice part 2](https://open.appacademy.io/learn/js-py---pt-jul-2023-online/week-9---big-o/timing-benchmarks-practice-part-2) - 20 mins
-    - 15 min Q&A
-
-## Reading && Practices 20 mins
-- [Timing Practice part 3](https://open.appacademy.io/learn/js-py---pt-jul-2023-online/week-9---big-o/timing-benchmarks-practice-part-3) - 20 mins
+- [Memory Practice](https://open.appacademy.io/learn/js-py---pt-jul-2023-online/week-9---big-o/timing-benchmarks-practice-part-1) - 20 mins
+  - [Memory Reading](https://open.appacademy.io/learn/js-py---pt-jul-2023-online/week-9---big-o/memory)
     - 15 min Q&A
 
 
+
 <br/>
 
-# [Formative Quiz](https://open.appacademy.io/learn/js-py---pt-jul-2023-online/week-9---big-o/formative-quiz---tuesday--repeat-) - 10 minutes
+# [Formative Quiz](https://open.appacademy.io/learn/js-py---pt-jul-2023-online/week-9---big-o/formative-quiz---thursday--repeat-) - 10 minutes
 
 
 # EOD
