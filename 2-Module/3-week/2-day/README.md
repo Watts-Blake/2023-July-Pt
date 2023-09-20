@@ -160,8 +160,6 @@ str.charCodeAt(2); // 67
 - [Advanced Conversion Functions](https://open.appacademy.io/learn/js-py---pt-jul-2023-online/week-9---big-o/memory-practice) - 15 mins
 
 - [Memory Practice](https://open.appacademy.io/learn/js-py---pt-jul-2023-online/week-9---big-o/timing-benchmarks-practice-part-1) - 20 mins
-  - [Memory Reading](https://open.appacademy.io/learn/js-py---pt-jul-2023-online/week-9---big-o/memory)
-    - 15 min Q&A
 
 
 
