@@ -4,7 +4,6 @@
 
 <br/>
 
-## Binary
 
 ### Base-10 : Decimal
 Base-10 refers to how many digits there are in the counting system: 0-9 in this case.
@@ -53,10 +52,10 @@ After doing this for all our numbers we will add them together
 2^0 * 0 = 1 * 0 = 0
 2^1 * 1 = 2 * 1 = 2
 2^2 * 0 = 4 * 0 = 0
-2^3 * 1 = 8 * 0 = 8
+2^3 * 1 = 8 * 1 = 8
 2^4 * 1 = 16 * 1 = 16
 2^5 * 1 = 32 * 1 = 32
-2^6 * 9 = 64 * 0 = 0
+2^6 * 0 = 64 * 0 = 0
 2^7 * 0 = 128 * 0 = 0
 2^8 * 1 = 256 * 1 = 256
 2^9 * 1 = 512 * 1 = 512
