@@ -28,13 +28,16 @@ A    B    A && B
 
 // Lets build one out ourselves now.
 
-//What if we wanted to write program to tell predict if it is raining.
+// What if we wanted to write program to tell predict if it is raining.
 
 // Our conditions would be if you live in Washington state and if it is raining.
 
 liveInWashington    Raining      liveInWashington && Raining
 -------------------------------------------------------------
-
+        0             0                        0
+        1             0                        0
+        0             1                        0
+        1             1                        1
 
 
 // now we can build a boolean expression in a function based off of this truth table
