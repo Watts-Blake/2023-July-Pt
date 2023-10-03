@@ -33,9 +33,9 @@ function getBaseLog2(input) {
   return logBase2ofInput;
 }
 
-console.log(getBaseLog2(8));
+console.log(getBaseLog2(8), Math.log2(8));
 
-console.log(getBaseLog2(625));
+console.log(getBaseLog2(625), Math.log2(625));
 
 const n = 10000000;
 const logN = getBaseLog2(n);
