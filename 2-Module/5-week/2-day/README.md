@@ -24,6 +24,8 @@ In this case above, our logarithim would be 3 since we can take 2 to the power o
 ### Why Logarithims
 We have learned about constant, linear, and quadratic complexity. But logarithmic is also a complexity that we can evaluate.
 
+![Alt text](big-O-chart.svg)
+
 ### Using Math.log [MDN Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/log)
 We can use Math.log to help us see the difference between linear and logarithmic complexity
 
