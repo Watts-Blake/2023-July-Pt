@@ -148,8 +148,9 @@ Place equal values to the right
 
 <br/>
 
-### Solo Practice 20 minutes
-- [Binary Search](https://open.appacademy.io/learn/js-py---pt-jul-2023-online/week-11---binary-search-and-trees/binary-search)
+### Solo Practice && Reading 30 minutes
+- [Binary Search Reading](https://open.appacademy.io/learn/js-py---pt-jul-2023-online/week-11---binary-search-and-trees/binary-search)
+- [Binary Search Pract](https://open.appacademy.io/learn/js-py---pt-jul-2023-online/week-11---binary-search-and-trees/binary-search)
     - Q&A
 <br/>
 
