@@ -1,0 +1,69 @@
+/* Universal Selector */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Type Selector or Element Selector */
+/* img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius:50%;
+} */
+/* Class Selector */
+div.red {
+  background-color: red;
+  height: 200px;
+  width:200px;
+}
+.blue {
+  background-color: blue;
+  height: 200px;
+  width: 200px;
+  padding: 50px;
+}
+/* ID Selector */
+#cat-img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius:50%;
+}
+/* Attribute Selector */
+div[class] {
+  border: 1px solid black;
+}
+
+div {
+  background-color: grey;
+}
+div.red {
+  color:white;
+}
+body div.red {
+  background-color: pink;
+}
+/* Descendant Selector */
+div p {
+  color: green;
+}
+/* Direct Child Selector */
+.outer > p {
+  font-size: 2vw;
+}
+div + p {
+  font-weight: bold;
+}
+
+#cat-img:hover {
+  height: 200px;
+  width: 200px;
+  transition: .2s linear all;
+  cursor: pointer;
+}
+ol::before {
+  background-color: lightblue;
+  border:5px solid black;
+  content:":)"
+}

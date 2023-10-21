@@ -1,0 +1,52 @@
+.outer {
+  background-color: grey;
+}
+.box-model {
+  box-sizing: border-box;
+  border: 10px dashed lime;
+  margin: 50px;
+  padding: 50px;
+  width: 50%;
+
+}
+.box-model p {
+  background-color: green;
+}
+
+.positions {
+  background-color: red;
+  height: 100px;
+  text-align: center;
+  width: 300px;
+}
+#static {
+  height: 100vh;
+}
+#sticky {
+  background-color: blue;
+  position: sticky;
+  top: 10px;
+  left: 10px;
+}
+#absolute {
+  background-color: green;
+  position: absolute;
+  right: 5vw;
+  top: 5vh;
+}
+#relative {
+  background-color: pink;
+  position:relative;
+  left: 10px;
+  top: 50px;
+  z-index: -1;
+}
+#fixed {
+  background-color: orange;
+  position: fixed;
+  right:5vw;
+}
+span {
+  background-color: black;
+  color:white;
+}
