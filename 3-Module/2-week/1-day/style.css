@@ -1,32 +1,60 @@
-/* p {color:white}
+p {color:white}
 .container p {background-color: red}
-.nested p    {background-color: blue}
+.nested span    {background-color: blue}
 .container {
   border: 1px solid red;
-  padding: 5px;
   display: flex;
-  flex-direction: column;
+  margin: 5px 0;
+  padding: 5px;
+  /* flex-wrap: wrap;
+  flex-direction: column; */
+  align-items: flex-start;
+  flex-flow: row-reverse nowrap;
+  justify-content: space-between;
 }
 .nested {
   border: 1px solid blue;
-  flex-direction: row;
-  gap: 5px;
+  height: 200px;
+  flex-flow: column wrap;
+  gap:5px;
+  align-items: center;
+  justify-content: space-between;
+}
+.first, .second, .third {
+  object-fit: content;
 }
 .first {
-
+  order: 1;
+  /* flex-grow: 1; */
+  /* flex-basis: 25%; */
 }
 .second {
-
+  order: 2;
+  /* flex-shrink: 1;
+  flex-basis: 50%; */
+  /* flex: 0 1 50%; */
 }
 .third {
-
-} */
+  order: 3;
+  /* flex-grow: 1;
+  flex-basis: 50%; */
+  /* flex: 1 0 50%; */
+}
 
 /* for media queries */
-p {
+.for-media-queries p {
   background-color: black;
   border-radius: 5px;
   color: white;
-  height: 110px;
+  height: 20vh;
   padding: 5px 10px;
+}
+
+@media screen and (max-width: 1500px) {
+  .for-media-queries p {
+    height: 500px;
+  }
+  .container {
+    flex-flow: column wrap;
+  }
 }
