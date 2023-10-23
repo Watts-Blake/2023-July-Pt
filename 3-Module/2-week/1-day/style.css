@@ -1,0 +1,32 @@
+/* p {color:white}
+.container p {background-color: red}
+.nested p    {background-color: blue}
+.container {
+  border: 1px solid red;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+}
+.nested {
+  border: 1px solid blue;
+  flex-direction: row;
+  gap: 5px;
+}
+.first {
+
+}
+.second {
+
+}
+.third {
+
+} */
+
+/* for media queries */
+p {
+  background-color: black;
+  border-radius: 5px;
+  color: white;
+  height: 110px;
+  padding: 5px 10px;
+}
