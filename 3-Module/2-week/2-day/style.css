@@ -1,0 +1,31 @@
+.container {
+  border: 1px solid red;
+}
+.card {
+  align-items: center;
+  border: 1px solid blue;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+  height:fit-content;
+  width: fit-content
+}
+.card img {
+  border: 2px solid white;
+  border-radius: 50%;
+  height: min(100vw, 300px);
+  object-fit: cover;
+  width: min(100vw, 300px);
+}
+.a {
+}
+.b {
+}
+.c {
+}
+.d {
+}
+.e {
+}
