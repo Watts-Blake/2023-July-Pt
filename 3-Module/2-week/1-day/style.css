@@ -1,32 +1,57 @@
-/* p {color:white}
-.container p {background-color: red}
-.nested p    {background-color: blue}
+p {color:white}
+/* .container div {background-color: red} */
+.nested div    {background-color: blue}
 .container {
   border: 1px solid red;
   padding: 5px;
-  display: flex;
-  flex-direction: column;
+  display: inline-flex;
+  /* flex-direction: row;
+  flex-wrap: wrap; */
+  flex-flow: column wrap;
+  gap: 10px;
 }
 .nested {
   border: 1px solid blue;
-  flex-direction: row;
-  gap: 5px;
+  color: white;
+  width: 90vw;
+  height: 200px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: flex-start;
+  justify-content: flex-start;
 }
 .first {
-
+  order: 1;
+  /* flex-grow: 1;
+  flex-basis: 70%; */
+  flex: 1 0 70%;
 }
 .second {
-
+  order: 2;
+  flex-shrink: 1;
+  flex-basis: 25%;
 }
 .third {
+  order: 3;
+  /* flex-grow: 1; */
+  flex-basis: 30%;
+}
 
-} */
-
-/* for media queries */
 p {
   background-color: black;
   border-radius: 5px;
   color: white;
   height: 110px;
   padding: 5px 10px;
+}
+
+@media screen and (max-width: 500px) {
+  body p {
+    height: 50vh;
+  }
+}
+@media screen and (max-width: 1000px) {
+  p {
+    height: 20vh;
+  }
 }
