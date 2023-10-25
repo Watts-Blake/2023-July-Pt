@@ -1,5 +1,15 @@
 .container {
   border: 1px solid red;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 2fr;
+  /* grid-template-areas:
+    "a a a"
+    "b c c"
+    "d d e"; */
+  /* align-items: stretch;
+  justify-items: stretch; */
+  /* grid-auto-flow: column; */
 }
 .card {
   align-items: center;
@@ -10,22 +20,32 @@
   justify-content: space-between;
   padding: 10px;
   height:fit-content;
-  width: fit-content
+  width: fit-content;
 }
 .card img {
   border: 2px solid white;
   border-radius: 50%;
-  height: min(100vw, 300px);
+  height: 100%;
   object-fit: cover;
-  width: min(100vw, 300px);
+  aspect-ratio: 1/1;
+  /* width: min(100vw, 300px); */
 }
-.a {
+/* .a {
+  grid-area: a;
 }
 .b {
+  grid-area: b;
 }
 .c {
+  grid-area: c;
 }
 .d {
+  grid-area: d;
 }
 .e {
+  grid-area: e;
+} */
+.d {
+  align-self: center;
+  justify-self: center;
 }
