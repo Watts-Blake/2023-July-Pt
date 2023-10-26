@@ -1,0 +1,23 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+button {
+  width: 50%;
+  height: 100px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  /* transition-delay: 1s; */
+  transition-duration: 2s;
+  transition-property: background-color, font-size;
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+button:hover {
+  background-color: orange;
+  font-size: 2em;
+  /* transition: */
+}
