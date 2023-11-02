@@ -1,4 +1,5 @@
 const http = require('http');
+const fs = require('fs');
 
 const resDoc = `
   <!DOCTYPE html>
@@ -10,7 +11,7 @@ const resDoc = `
   </head>
   <body>
     <h1>#PAGENAME</h1>
-    <p>This is the #PAGENAME.</p>
+    <p>This is the #PAGENAME .</p>
   </body>
   </html>
 `;
@@ -22,15 +23,38 @@ const server = http.createServer((req, res) => {
     reqBody += data;
   });
   req.on('end', () => {
-    reqBody = reqBody.split('&');
-    reqBody = reqBody.map(pair => pair.split('='));
-    reqBody = reqBody.map(pair => pair.map(el => el.replace('+', ' ')));
-    reqBody = reqBody.map(pair => pair.map(el => decodeURIComponent(el)));
-    reqBody.forEach(pair => pojo[pair[0]] = pair[1]);
-    reqBody = pojo;
+    console.log(req.headers)
+    if (req.headers['content-type'] === 'application/json') {
+      console.log('RAW: ', reqBody)
+      // console.log(JSON.parse(reqBody));
+      // console.log('SERIALIZED: ', JSON.stringify({'age':32, 'pets':['dog', 'cat', 'mouse']}));
+    } else {
+      reqBody = reqBody.split('&');
+      reqBody = reqBody.map(pair => pair.split('='));
+      reqBody = reqBody.map(pair => pair.map(el => el.replace('+', ' ')));
+      reqBody = reqBody.map(pair => pair.map(el => decodeURIComponent(el)));
+      reqBody.forEach(pair => pojo[pair[0]] = pair[1]);
+      reqBody = pojo;
+    }
   });
 
-  
+  if (req.method === 'GET' && req.url === '/') {
+    res.statusCode = 200;
+    res.setHeader('Content-Type', "text/html");
+    return res.end(resDoc.replaceAll('#PAGENAME', 'Home Page'));
+  }
+  if (req.method === 'GET' && req.url === '/banana') {
+    res.statusCode = 200;
+    res.setHeader('Content-Type', "text/html");
+    return res.end(resDoc.replaceAll('#PAGENAME', 'Banana Page'));
+  }
+  if (req.method === 'GET' && req.url === '/catpic') {
+    let catpic = fs.readFileSync('./cat.jpg');
+
+    res.statusCode = 200;
+    res.setHeader('Content-Type', "image/jpg");
+    return res.end(catpic);
+  }
 
   res.statusCode = 404;
   res.setHeader('Content-Type', "text/plain");
