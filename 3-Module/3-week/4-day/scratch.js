@@ -1,4 +1,5 @@
 const http = require('http');
+const fs = require('fs');
 
 const resDoc = `
   <!DOCTYPE html>
@@ -22,15 +23,39 @@ const server = http.createServer((req, res) => {
     reqBody += data;
   });
   req.on('end', () => {
-    reqBody = reqBody.split('&');
-    reqBody = reqBody.map(pair => pair.split('='));
-    reqBody = reqBody.map(pair => pair.map(el => el.replace('+', ' ')));
-    reqBody = reqBody.map(pair => pair.map(el => decodeURIComponent(el)));
-    reqBody.forEach(pair => pojo[pair[0]] = pair[1]);
-    reqBody = pojo;
+    if (reqBody.length) {
+      if (req.headers['Content-Type'] === 'application/x-www-form-urlencoded') {
+        reqBody = reqBody.split('&');
+        reqBody = reqBody.map(pair => pair.split('='));
+        reqBody = reqBody.map(pair => pair.map(el => el.replace('+', ' ')));
+        reqBody = reqBody.map(pair => pair.map(el => decodeURIComponent(el)));
+        reqBody.forEach(pair => pojo[pair[0]] = pair[1]);
+        reqBody = pojo;
+      } else {
+        console.log(reqBody);
+        reqBody = JSON.parse(reqBody);
+        console.log(reqBody);
+        console.log(JSON.stringify({name:'toby', job:'hr'}))
+      }
+    }
   });
+  if (req.method === 'GET' && req.url === '/cat') {
+    let catpic = fs.readFileSync('./cat.jpg');
 
-  
+    res.statusCode = 200;
+    res.setHeader('Content-Type', "image/jpeg");
+    return res.end(catpic);
+  }
+  if (req.method === 'GET' && req.url === '/') {
+    res.statusCode = 200;
+    res.setHeader('Content-Type', "text/html");
+    return res.end(resDoc.replaceAll('#PAGENAME', 'Home Page'));
+  }
+  if (req.method === 'GET' && req.url === '/cats') {
+    res.statusCode = 200;
+    res.setHeader('Content-Type', "text/html");
+    return res.end(resDoc.replaceAll('#PAGENAME', 'Cat Page'));
+  }
 
   res.statusCode = 404;
   res.setHeader('Content-Type', "text/plain");
