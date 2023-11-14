@@ -1,4 +1,7 @@
-class Wallet {
+const fs = require('fs')
+import fs from 'fs';
+
+export class Wallet {
   constructor() {
     this.value = 0;
   }
@@ -13,10 +16,13 @@ class Wallet {
   }
 }
 
-function sayHello() {
+export function sayHello() {
   console.log('Hello!');
 }
 
-const sayHi = () => {
+export const sayHi = () => {
   console.log('Hi');
 }
+
+module.exports = {Wallet, sayHello, sayHi}
+export default {Wallet, sayHello, sayHi};
